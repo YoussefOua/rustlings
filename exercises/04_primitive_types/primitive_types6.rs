@@ -6,13 +6,13 @@
 // Execute `rustlings hint primitive_types6` or use the `hint` watch subcommand
 // for a hint.
 
-// I AM NOT DONE
 
+/// Il faut remplacer ??? par l'index qu'on veut recupérer dans le tuple danbs notre cas c'est le deuxième élément donc numbers.1
 #[test]
 fn indexing_tuple() {
     let numbers = (1, 2, 3);
     // Replace below ??? with the tuple indexing syntax.
-    let second = ???;
+    let second = numbers.1;
 
     assert_eq!(2, second,
         "This is not the 2nd number in the tuple!")

@@ -5,8 +5,7 @@
 // Execute `rustlings hint intro2` or use the `hint` watch subcommand for a
 // hint.
 
-// I AM NOT DONE
-
+/// Il faut changer le nom de la macro "printline" en "println"
 fn main() {
-    printline!("Hello there!")
+    println!("Hello there!")
 }

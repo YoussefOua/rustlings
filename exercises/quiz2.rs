@@ -20,7 +20,6 @@
 //
 // No hints this time!
 
-// I AM NOT DONE
 
 pub enum Command {
     Uppercase,
@@ -32,11 +31,26 @@ mod my_module {
     use super::Command;
 
     // TODO: Complete the function signature!
-    pub fn transformer(input: ???) -> ??? {
+    /// L'entrée de la fonction est un vecteur de Tuple de 2 qui contient String et Command
+    /// La fonction retourne un vecteur de String
+    /// La fonction transformer vérifie la commande passée et traite le string en fonction de cette dernière
+    /// Si la commande est trim la fonction applique trim() sur le String
+    /// Si la commande est Uppercase la fonction transforme le String en lettres majuscules
+    /// Si la commande est Append(n) la fonction rajoute n fois "bar" à String
+    /// On utilisera un match pour gérer les differents cas
+    /// Pour Append je me suis aidé d'une solution sur internet
+    /// Il fallait mettre le match dans une variable et la push sur le vecteur
+    pub fn transformer(input: Vec<(String,Command)>) -> Vec<String> {
         // TODO: Complete the output declaration!
-        let mut output: ??? = vec![];
+        let mut output: Vec<String> = vec![];
         for (string, command) in input.iter() {
             // TODO: Complete the function body. You can do it!
+            let s = match command {
+                Command::Uppercase => string.to_uppercase(),
+                Command:: Trim => string.trim().to_string(),
+                Command:: Append(n) => string.to_owned() + &"bar".repeat(*n),
+            };
+            output.push(s);
         }
         output
     }
@@ -45,7 +59,8 @@ mod my_module {
 #[cfg(test)]
 mod tests {
     // TODO: What do we need to import to have `transformer` in scope?
-    use ???;
+    /// On doit importer la fonction "transformer" du module "my_module" pour pouvoir l'utiliser
+    use super::my_module::transformer;
     use super::Command;
 
     #[test]

@@ -13,10 +13,17 @@
 //
 // No hints this time ;)
 
-// I AM NOT DONE
 
 // Put your function here!
-// fn calculate_price_of_apples {
+/// fonction de calcul de prix qui prend en argument le nombre de pommes de type "i32" et qui retourne le prix de type "i32" aussi
+/// si le nombre de pommes est supérieur à 40 chaque pomme coûte une pièce sinon une pomme coûte deux pièces
+fn calculate_price_of_apples(num : i32) -> i32{
+    if num > 40 {
+        num
+    } else {
+        num * 2
+    }
+}
 
 // Don't modify this function!
 #[test]

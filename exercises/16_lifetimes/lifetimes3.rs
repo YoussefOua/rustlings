@@ -5,11 +5,10 @@
 // Execute `rustlings hint lifetimes3` or use the `hint` watch subcommand for a
 // hint.
 
-// I AM NOT DONE
-
-struct Book {
-    author: &str,
-    title: &str,
+/// Pour compiler ce code on doit ajouter les lifetime aux champs du struct
+struct Book <'a>{
+    author: &'a str,
+    title: &'a str,
 }
 
 fn main() {
